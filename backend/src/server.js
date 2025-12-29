@@ -14,7 +14,14 @@ import productRoutes from "./routes/product.route.js";
 import cartRoutes from "./routes/cart.route.js";
 const app=express();
 const __dirname=path.resolve();
-app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://expo-ecommerce-1-ndz5.onrender.com"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(clerkMiddleware());
 app.use("/api/inngest", serve({ client: inngest, functions }));
