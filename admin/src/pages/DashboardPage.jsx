@@ -21,7 +21,7 @@ function DashboardPage() {
   const statsCards = [
     {
       name: "Total Revenue",
-      value: statsLoading ? "..." : `$${statsData?.totalRevenue?.toFixed(2) || 0}`,
+      value: statsLoading ? "..." : `₹${statsData?.totalRevenue?.toFixed(2) || 0}`,
       icon: <DollarSignIcon className="size-8" />,
     },
     {
