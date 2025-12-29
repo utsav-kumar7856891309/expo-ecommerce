@@ -103,7 +103,7 @@ function DashboardPage() {
                       </td>
 
                       <td>
-                        <span className="font-semibold">${order.totalPrice.toFixed(2)}</span>
+                        <span className="font-semibold">₹{order.totalPrice.toFixed(2)}</span>
                       </td>
 
                       <td>
